@@ -21,7 +21,7 @@ type Instrument struct {
 func NewInstrument() *Instrument {
 	return &Instrument{
 		handledCounter: prom.NewCounterVec(prom.CounterOpts{
-			Name: "gin_rest_handled_total",
+			Name: "gin_handled_total",
 			Help: "Total number of api handled on the server, regardless of success or failure",
 		}, []string{"method", "path", "status_code"}),
 		handledHistogram: nil,
